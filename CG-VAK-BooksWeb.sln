@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG-VAK-BooksWeb", "CG-VAK-BooksWeb.csproj", "{6A3993CD-B408-4C78-A245-620CBEAB0A23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CGVakBooks.DataAccess", "CGVakBooks.DataAccess\CGVakBooks.DataAccess.csproj", "{7E89E2A8-9267-4509-8AB7-351F71A2F2C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CGVakBooks.Models", "CGVakBooks.Models\CGVakBooks.Models.csproj", "{99AF9EE3-3429-4CC7-B7D1-EA20CA92028E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CGVakBooks.Utilities", "CGVakBooks.Utilities\CGVakBooks.Utilities.csproj", "{293C6D69-0FE9-4A30-9FEB-972B7DD3A2EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC22E830-32B9-42AD-B98B-28D8007A2B4B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CGVAKBooks.API", "CGVAKBooks.API\CGVAKBooks.API.csproj", "{F550B300-96C5-4BEC-8AE0-FB14E74CBF88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A3993CD-B408-4C78-A245-620CBEAB0A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3993CD-B408-4C78-A245-620CBEAB0A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3993CD-B408-4C78-A245-620CBEAB0A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3993CD-B408-4C78-A245-620CBEAB0A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E89E2A8-9267-4509-8AB7-351F71A2F2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E89E2A8-9267-4509-8AB7-351F71A2F2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E89E2A8-9267-4509-8AB7-351F71A2F2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E89E2A8-9267-4509-8AB7-351F71A2F2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99AF9EE3-3429-4CC7-B7D1-EA20CA92028E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AF9EE3-3429-4CC7-B7D1-EA20CA92028E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AF9EE3-3429-4CC7-B7D1-EA20CA92028E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AF9EE3-3429-4CC7-B7D1-EA20CA92028E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293C6D69-0FE9-4A30-9FEB-972B7DD3A2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293C6D69-0FE9-4A30-9FEB-972B7DD3A2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293C6D69-0FE9-4A30-9FEB-972B7DD3A2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293C6D69-0FE9-4A30-9FEB-972B7DD3A2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F550B300-96C5-4BEC-8AE0-FB14E74CBF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F550B300-96C5-4BEC-8AE0-FB14E74CBF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F550B300-96C5-4BEC-8AE0-FB14E74CBF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F550B300-96C5-4BEC-8AE0-FB14E74CBF88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD532D92-0C92-42F7-80E5-FED89B634FE8}
+	EndGlobalSection
+EndGlobal

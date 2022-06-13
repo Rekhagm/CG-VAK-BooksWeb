@@ -1,0 +1,129 @@
+﻿@model products
+
+
+<div class="container">
+    <div class="col-md-10 mx-auto mt-4 border border-1 p-3">
+    <div class="row">
+        @*<h2>@(Model.Id == 0 ? "Create" :"Update") Product</h2>*@
+        @if(@ViewBag.mode.ToString()=="create")
+                    {
+                        <h2>Create Product</h2>
+                        
+                    }else{
+                          <h2>Update Product</h2>
+                    }
+    </div>
+
+    <partial name="_Notification"/>
+  <div class="row">
+    <div class="col-md-10">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="row">
+@*            <div asp-validation-summary="All" class="text-danger"></div>*@
+             <div class="form-group">
+                <label class="form-group">Title</label>
+                <input  class="form-control" asp-for="Title">
+                 <span asp-validation-for="Title" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                <label class="form-group">Description</label>
+                <input class="form-control" asp-for="Description"/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+              </div>
+              <div class="form-group col-6">
+                <label class="form-group">ISBN</label>
+                <input class="form-control" asp-for="ISBN"/>
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6">
+                <label class="form-group">Author</label>
+                <input class="form-control" asp-for="Author"/>
+                <span asp-validation-for="Author" class="text-danger"></span>
+              </div>
+              <div class="form-group col-6">
+                <label class="form-group" asp-for="ListPrice"></label>
+                <input  class="form-control" asp-for="ListPrice">
+                <span asp-validation-for="ListPrice" class="text-danger"></span>
+               </div>
+             <div class="form-group col-6">
+                <label class="form-group">Price for 1-50</label>
+                <input class="form-control" asp-for="Price"/>
+                <span asp-validation-for="Price" class="text-danger"></span>
+              </div>
+                <div class="form-group col-6">
+                <label class="form-group">Price for 51-100</label>
+                <input class="form-control" asp-for="Price50"/>
+                <span asp-validation-for="Price50" class="text-danger"></span>
+              </div>
+                <div class="form-group col-6">
+                <label class="form-group">Price 100+</label>
+                <input class="form-control" asp-for="Price100"/>
+                <span asp-validation-for="Price100" class="text-danger"></span>
+              </div>
+                <div class="form-group col-6">
+                <label class="form-group">ImageUrl</label>
+                <input asp-for="ImageUrl"  id="ImageUpload" name="file" type="file" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+              </div>
+               <div class="form-group col-6">
+                <label asp-for="CategoryId" class="form-label"></label>
+                <select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-control">
+                    <option disabled selected>--Select Category--</option>
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+               <div class="form-group col-6">
+                <label asp-for="CoverTypeId" class="form-label"></label>
+                <select asp-for="CoverTypeId" asp-items="ViewBag.CoverTypeList" class="form-control">
+                    <option disabled selected>--Select CoverType--</option>
+                </select>
+                <span asp-validation-for="CoverTypeId" class="text-danger"></span>
+            </div>
+               <div class="mt-2">
+                   @if(@ViewBag.mode.ToString() == "create")
+                    {
+                        <button type="submit" onclick="return ImageUploadValidate()" class="btn btn-primary">Create</button>
+                        
+                    }else{
+                         <button type="submit" class="btn btn-primary">Update</button>
+                    }
+
+            <a class="btn btn-outline-secondary" asp-controller="Product" asp-action="Index">Back to List</a>
+              </div>
+          </div>
+            </form>
+        </div>
+
+            @if (@ViewBag.mode.ToString()=="update")
+            {
+                <div class="col-2">
+                    <img src="@Model.ImageUrl" class="p-2" style="width:100% ; border : 1px solid gray; border-radius:10px"/>
+            </div>
+          }
+    </div>
+</div>
+</div>
+
+@section Scripts
+{
+   @{
+        <partial name= "_ValidationScriptsPartial"/>
+    }
+
+    <script>
+      function ImageUploadValidate(){
+          if(documnet.getElementById("ImageUpload").value==""){
+              Swal.fire({
+              title: 'Error!',
+              text: 'Do you want to continue',
+              icon: 'error',
+              confirmButtonText: 'Cool'
+          })
+               return false;
+          }
+
+          return true;
+      }
+
+    </script>
+}

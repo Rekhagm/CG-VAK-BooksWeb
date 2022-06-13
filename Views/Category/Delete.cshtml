@@ -1,0 +1,31 @@
+﻿
+@model Category
+
+
+<div class="container">
+    <div class="col-md-6 mx-auto">
+    <div class="row">
+        <h2>Delete Category</h2>
+    </div>
+    <div class="col-md-6">
+        <form method="POST">
+          
+             <div class="form-group">
+                <label class="form-group">Name</label>
+                <input  class="form-control" asp-for="Name" disabled/>
+               
+               </div>
+              <div class="form-group">
+                <label class="form-group">Order Of Display</label>
+                <input class="form-control" asp-for="OrderOfDisplay" disabled/>
+             
+              </div>
+            
+               <div class="mt-2"></div>
+            <button type="submit" class="btn btn-primary">Delete</button>
+            <a class="btn btn-outline-secondary" asp-controller="Category" asp-action="Index">Back to List</a>
+            </form>
+    </div>
+</div>
+</div>
+

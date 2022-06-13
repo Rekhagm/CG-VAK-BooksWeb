@@ -1,0 +1,34 @@
+﻿@model products
+
+<div class="container">
+    <div class="col-md-6 mx-auto">
+    <div class="row">
+        <h2>Delete Product</h2>
+    </div>
+    <div class="col-md-6">
+        <form method="POST">
+            <div asp-validation-summary="All" class="text-danger"></div>
+             <div class="form-group">
+                <label class="form-group">Title</label>
+                <input  class="form-control" asp-for="Title" disabled>
+               </div>
+              <div class="form-group">
+                <label class="form-group">Authors</label>
+                <input class="form-control" asp-for="Author" disabled/>
+              </div>
+              <div class="form-group">
+                <label class="form-group">[Description]</label>
+                <input class="form-control" asp-for="Description" disabled/>
+              </div>
+             <div class="form-group">
+                <label class="form-group">[Price]</label>
+                <input class="form-control" asp-for="Price" disabled/>
+              </div>
+               <div class="mt-2"></div>
+            <button type="submit" class="btn btn-primary">Delete</button>
+            <a class="btn btn-outline-secondary" asp-controller="Category" asp-action="Index">Back to List</a>
+            </form>
+    </div>
+</div>
+</div>
+

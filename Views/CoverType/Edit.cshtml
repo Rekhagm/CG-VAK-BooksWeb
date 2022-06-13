@@ -1,0 +1,25 @@
+﻿
+@model CoverType
+
+
+
+<div class="container">
+    <div class="col-md-6 mx-auto">
+    <div class="row">
+        <h2>Edit CoverType</h2>
+    </div>
+    <div class="col-md-6">
+        <form method="POST">
+          
+             <div class="form-group">
+                <label class="form-group">Name</label>
+                <input  class="form-control" asp-for="Name">
+               </div>
+            
+               <div class="mt-2"></div>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a class="btn btn-outline-secondary" asp-controller="Category" asp-action="Index">Back to List</a>
+            </form>
+    </div>
+</div>
+</div>
